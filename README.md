@@ -1,7 +1,7 @@
 # financial-risk-measurement
 This repo contains the source code where I implement the topics of the Risk Econometrics exam that I studied during my academic experience at the University of Bologna.
 
-The textbook from which I studied the theory is *"[Elements of Financial Risk Management](https://www.amazon.it/Elements-Financial-Management-Peter-Christoffersen/dp/0128102357)"*, and the implementation was conducted in [R](https://cran.r-project.org/), using the `rugarch`,` rmgarch` and `quarks` packages.
+The textbook from which I studied the theory is *["Elements of Financial Risk Management"](https://www.amazon.it/Elements-Financial-Management-Peter-Christoffersen/dp/0128102357)*, and the implementation was conducted in [R](https://cran.r-project.org/), using the `rugarch`,` rmgarch` and `quarks` packages.
 
 ## Goal
 The goal of the project is to measure the portfolio risk using [Value at Risk](https://en.wikipedia.org/wiki/Value_at_risk) and the [Expected Shortfall](https://en.wikipedia.org/wiki/Expected_shortfall), comparing the different methods for their calculation and modeling the conditional volatility of log returns.
