@@ -1,7 +1,7 @@
 # financial-risk-measurement
 This repo contains the source code where I implement the topics of the Risk Econometrics exam that I studied during my academic experience at the University of Bologna.
 
-The textbook from which I studied the theory is *["Elements of Financial Risk Management"](https://www.amazon.it/Elements-Financial-Management-Peter-Christoffersen/dp/0128102357)*, and the implementation was conducted in [R](https://cran.r-project.org/), using the `rugarch`,` rmgarch` and `quarks` packages.
+The textbook from which I studied the theory is *["Elements of Financial Risk Management"](https://www.amazon.it/Elements-Financial-Management-Peter-Christoffersen/dp/0128102357)*, and the implementation was conducted in [R](https://cran.r-project.org/), using the [`rugarch`](https://cran.r-project.org/web/packages/rugarch/index.html), [`rmgarch`](https://cran.r-project.org/web/packages/rmgarch/index.html) and [`quarks`](https://cran.r-project.org/web/packages/quarks/index.html) packages.
 
 ## Goal
 The goal of the project is to measure the portfolio risk using [Value at Risk](https://en.wikipedia.org/wiki/Value_at_risk) and the [Expected Shortfall](https://en.wikipedia.org/wiki/Expected_shortfall), comparing the different methods for their calculation and modeling the conditional volatility of log returns.
@@ -18,8 +18,8 @@ The methods used are:
 
 - ***Non-parametric methods*** (no assumptions on the distribution of returns)
 
-  - *Historical Simulation (HS)*
-  - *Age-Weighted Historical Simulation (WHS)*
+  - [*Historical Simulation (HS)*](https://en.wikipedia.org/wiki/Historical_simulation_(finance))
+  - [*Age-Weighted Historical Simulation (WHS)*](https://en.wikipedia.org/wiki/Historical_simulation_(finance))
 
 - ***Parametric methods*** (hypothesis on the distribution of returns)
   - *Normal Distribution*
@@ -32,16 +32,16 @@ VaR and ES are calculated both on the entire portfolio and using rolling windows
 
 Different methods for modeling conditional volatility are compared: 
 
-- The RiskMetrics *EWMA model*
-- Different specifications of *GARCH* (*Standard GARCH*, *Integrated-GARH*, *GJR-GARCH*, *Nonlinear-GARCH* and *Exponential-GARCH*).
+- The RiskMetrics [*EWMA*](https://en.wikipedia.org/wiki/Moving_average#Exponential_moving_average) *model*
+- Different specifications of [*GARCH*](https://en.wikipedia.org/wiki/Autoregressive_conditional_heteroskedasticity#GARCH) (*Standard GARCH*, *Integrated-GARH*, *GJR-GARCH*, *Nonlinear-GARCH* and *Exponential-GARCH*).
 
 For each of these models, different distributional assumptions of returns have been evaluated:
 
 - *Normal distribution*
 - *Stundent-t distribution*
 - Empirical distribution using the *Cornish-Fisher expansion* method
-- Empirical distribution using the *Filtered Historical Simulation (FHS)* method
-- Empirical distribution using the *Extreme Value Theory (EVT)* method (Hill estimator)
+- Empirical distribution using the [*Filtered Historical Simulation (FHS)*](https://en.wikipedia.org/wiki/Historical_simulation_(finance)) method
+- Empirical distribution using the [*Extreme Value Theory (EVT)*](https://en.wikipedia.org/wiki/Extreme_value_theory) method (Hill estimator)
 
 The best specification was chosen using *backtesting*.
 
